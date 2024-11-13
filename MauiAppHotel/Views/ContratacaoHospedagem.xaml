@@ -12,16 +12,17 @@
                FontSize="45"
                TextColor="{StaticResource White}"/>
 
-        <Frame Padding="10">
+        <Frame Padding="10"
+               BackgroundColor="{StaticResource Gray600}" BorderColor="{StaticResource Gray600}">
             <VerticalStackLayout>
                 <Grid RowDefinitions="Auto, Auto"
                       ColumnDefinitions="*, *, 2*">
 
                     <Label Grid.Row="0" Grid.Column="0"
-                           Text="Adultos:"/>
+                           Text="Adultos:" TextColor="White"/>
 
                     <Label Grid.Row="0" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="{StaticResource White}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_adultos}"/>
 
@@ -33,10 +34,10 @@
 
 
                     <Label Grid.Row="1" Grid.Column="0"
-                           Text="Crianças:"/>
+                           Text="Crianças:" TextColor="White"/>
 
                     <Label Grid.Row="1" Grid.Column="1"
-                           TextColor="{StaticResource Primary}"
+                           TextColor="{StaticResource White}"
                            Text="{Binding Value}"
                            BindingContext="{x:Reference stp_criancas}"/>
 
@@ -48,24 +49,28 @@
 
                 </Grid>
 
-                <Label Text="Escolha sua Suíte:"/>
+                <Label Text="Escolha sua Suíte:" TextColor="White"
+                       TextTransform="Uppercase"
+                       FontSize="Subtitle"/>
 
                 <Picker x:Name="pck_quarto"
-                        Title="Selecione sua Acomodação"
-                        ItemDisplayBinding="{Binding Descricao}"/>
+                        Title=""
+                        ItemDisplayBinding="{Binding Descricao}" TextColor="White"/>
 
-                <Frame Padding="10" Margin="10">
-                    <VerticalStackLayout>
-                        <Label Text="Peíodo de Estadia"/>
+                <Frame Padding="10" Margin="10" BackgroundColor="{StaticResource Gray900}" BorderColor="{StaticResource Gray600}">
+                    <VerticalStackLayout VerticalOptions="CenterAndExpand">
+                        <Label Text="Peíodo de Estadia"  TextColor="White"
+                       TextTransform="Uppercase"
+                       FontSize="Subtitle"/>
 
                         <HorizontalStackLayout>
-                            <Label Text="Check-in"/>
-                            <DatePicker x:Name="dtpck_checkin" Format="dd/mm/yyyy" DateSelected="dtpck_checkin_DateSelected"/>
+                            <Label Text="Check-in" TextColor="White"/>
+                            <DatePicker x:Name="dtpck_checkin" Format="dd/mm/yyyy" DateSelected="dtpck_checkin_DateSelected" TextColor="White"/>
                         </HorizontalStackLayout>
 
                         <HorizontalStackLayout>
-                            <Label Text="Check-out"/>
-                            <DatePicker x:Name="dtpck_checkout" Format="dd/mm/yyyy"/>
+                            <Label Text="Check-out" TextColor="White"/>
+                            <DatePicker x:Name="dtpck_checkout" Format="dd/mm/yyyy" TextColor="White"/>
                         </HorizontalStackLayout>
 
                     </VerticalStackLayout>
